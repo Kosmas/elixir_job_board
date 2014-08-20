@@ -6,6 +6,8 @@ defmodule JobBoard do
   def start(_type, _args) do
     import Supervisor.Spec, warn: false
 
+    tree = [worker(JobBoard.Repo, [])]
+
     children = [
       # Define workers and child supervisors to be supervised
       # worker(TestApp.Worker, [arg1, arg2, arg3])]
