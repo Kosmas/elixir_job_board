@@ -5,15 +5,8 @@ defmodule JobBoard do
   # for more information on OTP Applications
   def start(_type, _args) do
     import Supervisor.Spec, warn: false
-
     tree = [worker(JobBoard.Repo, [])]
-
-    children = [
-      # Define workers and child supervisors to be supervised
-      # worker(TestApp.Worker, [arg1, arg2, arg3])]
-    ]
-
-    opts = [strategy: :one_for_one, name: JobBoard.Supervisor]
-    Supervisor.start_link(children, opts)
+    opts = [strategy: :one_for_one, name: JobBoard.Sup]
+    Supervisor.start_link(tree, opts)
   end
 end
