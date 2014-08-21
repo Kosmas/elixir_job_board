@@ -1,8 +1,8 @@
-defmodule PhoenixJobs.Repo do
+defmodule JobBoard.Repo do
   use Ecto.Repo, adapter: Ecto.Adapters.Postgres
 
   def conf do
-    parse_url "ecto://pguser:rtwe34@localhost/job_board"
+    parse_url "ecto://elixir:rixile@localhost/job_board"
   end
 
   def priv do
