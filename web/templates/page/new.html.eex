@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h1>New Job</h1>
+    <form class="form-horizontal" action="/new" method="post" name="newJob">
+
+     <div class="form-group">
+        <label for="title" class="col-sm-2 control-label">Job Title</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="title" name="title" placeholder="Job Title" required="required">
+        </div>
+     </div>
+
+     <div class="form-group">
+      <label for="description" class="col-sm-2 control-label">Job Description</label>
+      <div class="col-sm-10">
+        <textarea id="description" placeholder="Job description..." class="form-control" name="description" cols="30" rows="10" required="required"></textarea>
+      </div>
+     </div>
+
+     <div class="form-group">
+      <label for="type" class="col-sm-2 control-label">Job Type</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="type" name="type" placeholder="Job Type">
+      </div>
+     </div>
+
+     <div class="form-group">
+      <label for="status" class="col-sm-2 control-label">Job Status</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="status" name="status" placeholder="Job Status">
+      </div>
+     </div>
+
+     <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-warning">Save</button>
+      </div>
+     </div>
+
+    </form>
+  </div>
+</div>
