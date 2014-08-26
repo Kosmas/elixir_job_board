@@ -7,4 +7,12 @@ defmodule JobBoard.Queries do
             select: job
     JobBoard.Repo.all(query)
   end
+
+  def job_detail_query(id) do
+    int_id = String.to_integer(id)
+    query = from job in JobBoard.Jobs,
+            where: job.id == ^int_id,
+            select: job
+    JobBoard.Repo.all(query) |> List.first
+  end
 end

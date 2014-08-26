@@ -16,4 +16,9 @@ defmodule JobBoard.PageController do
     JobBoard.Repo.insert(job)
     redirect conn, Router.index_path(:index)
   end
+
+  def job(conn, params) do
+    job = JobBoard.Queries.job_detail_query(params["id"])
+    render conn, "job", [job: job, action: params["action"]]
+  end
 end

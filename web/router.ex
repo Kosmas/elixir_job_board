@@ -5,4 +5,5 @@ defmodule JobBoard.Router do
   get "/", JobBoard.PageController, :index, as: :index
   get "/new", JobBoard.PageController, :new, as: :new
   post "/new", JobBoard.PageController, :save, as: :save
+  get "/job/:id", JobBoard.PageController, :job, as: :job
 end
