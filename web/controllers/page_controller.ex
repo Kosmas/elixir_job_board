@@ -35,4 +35,10 @@ defmodule JobBoard.PageController do
     JobBoard.Repo.update(job)
     redirect conn, Router.index_path(:index)
   end
+
+  def destroy(conn, params) do
+    job = JobBoard.Queries.job_detail_query(params["id"])
+    JobBoard.Repo.delete(job)
+    redirect conn, Router.index_path(:index)
+  end
 end

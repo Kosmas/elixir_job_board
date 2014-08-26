@@ -8,4 +8,6 @@ defmodule JobBoard.Router do
   get "/job/:id", JobBoard.PageController, :job, as: :job
   get "/job/:id/edit", JobBoard.PageController, :edit, as: :edit
   post "/job/:id", JobBoard.PageController, :update, as: :update
+  get "/job/:id/:action", JobBoard.PageController, :job, as: :delete
+  post "/", JobBoard.PageController, :destroy, as: :destroy
 end
