@@ -14,7 +14,7 @@ defmodule JobBoard.PageController do
   def save(conn, params) do
     job = %JobBoard.Jobs{title: params["title"], description: params["description"], job_type: params["type"], job_status: params["status"]}
     JobBoard.Repo.insert(job)
-    redirect conn, Router.index_path(:index)
+    redirect conn, Router.pages_path(:index)
   end
 
   def job(conn, params) do
@@ -33,12 +33,12 @@ defmodule JobBoard.PageController do
     job = %{job | title: params["title"], description: params["description"],
                   job_type: params["type"], job_status: params["status"]}
     JobBoard.Repo.update(job)
-    redirect conn, Router.index_path(:index)
+    redirect conn, Router.pages_path(:index)
   end
 
   def destroy(conn, params) do
     job = JobBoard.Queries.job_detail_query(params["id"])
     JobBoard.Repo.delete(job)
-    redirect conn, Router.index_path(:index)
+    redirect conn, Router.pages_path(:index)
   end
 end

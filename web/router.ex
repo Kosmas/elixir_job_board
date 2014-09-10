@@ -2,7 +2,7 @@ defmodule JobBoard.Router do
   use Phoenix.Router
 
   plug Plug.Static, at: "/static", from: :job_board
-  get "/", JobBoard.PageController, :index, as: :index
+  get "/", JobBoard.PageController, :index, as: :pages
   get "/new", JobBoard.PageController, :new, as: :new
   post "/new", JobBoard.PageController, :save, as: :save
   get "/job/:id", JobBoard.PageController, :job, as: :job
