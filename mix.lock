@@ -4,9 +4,10 @@
   "ecto": {:package, "0.2.3"},
   "inflex": {:package, "0.2.4"},
   "jazz": {:package, "0.2.0"},
-  "linguist": {:package, "0.1.1"},
-  "phoenix": {:git, "git://github.com/phoenixframework/phoenix.git", "1221ce029998502777efa57143f4511011656729", []},
-  "plug": {:package, "0.5.3"},
+  "linguist": {:package, "0.1.2"},
+  "phoenix": {:git, "git://github.com/phoenixframework/phoenix.git", "0708004408d0478a4d00544f9907543ef2e40b6a", []},
+  "plug": {:package, "0.7.0"},
+  "poison": {:package, "1.1.0"},
   "poolboy": {:package, "1.2.1"},
   "postgrex": {:package, "0.5.4"},
   "ranch": {:package, "1.0.0"}}
