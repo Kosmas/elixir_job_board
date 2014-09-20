@@ -4,7 +4,7 @@ defmodule JobBoard.Mixfile do
   def project do
     [ app: :job_board,
       version: "0.0.1",
-      elixir: "~> 1.0.0-rc1",
+      elixir: "~> 1.0.0",
       elixirc_paths: ["lib", "web"],
       deps: deps ]
   end
@@ -26,8 +26,8 @@ defmodule JobBoard.Mixfile do
     [
       {:phoenix, github: "phoenixframework/phoenix"},
       {:cowboy, "~> 1.0.0"},
-      {:postgrex, "0.5.4"},
-      {:ecto, "0.2.3"}
+      {:postgrex, "0.6.0"},
+      {:ecto, "0.2.5"}
     ]
   end
 end
