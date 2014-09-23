@@ -11,13 +11,13 @@ defmodule JobBoard.JobController do
     render conn, "new"
   end
 
-  def save(conn, params) do
+  def create(conn, params) do
     job = %JobBoard.Jobs{title: params["title"], description: params["description"], job_type: params["type"], job_status: params["status"]}
     JobBoard.Repo.insert(job)
-    redirect conn, Router.pages_path(:index)
+    #redirect conn, Router.pages_path(:index)
   end
 
-  def job(conn, params) do
+  def show(conn, params) do
     job = JobBoard.Queries.job_detail_query(params["id"])
     render conn, "job", [job: job, action: params["action"]]
   end
