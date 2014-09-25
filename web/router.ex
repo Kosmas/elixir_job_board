@@ -3,6 +3,6 @@ defmodule JobBoard.Router do
 
   scope alias: JobBoard do
     get "/", PageController, :index, as: :pages
-    resources "jobs", JobController
+    resources "/jobs", JobController
   end
 end
