@@ -14,7 +14,7 @@ defmodule JobBoard.JobController do
   def create(conn, params) do
     job = %JobBoard.Jobs{title: params["title"], description: params["description"], job_type: params["type"], job_status: params["status"]}
     JobBoard.Repo.insert(job)
-    #redirect conn, Router.pages_path(:index)
+    redirect conn, Router.pages_path(:index)
   end
 
   def show(conn, params) do
