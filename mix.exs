@@ -13,7 +13,7 @@ defmodule JobBoard.Mixfile do
   def application do
     [
       mod: { JobBoard, [] },
-      applications: [:phoenix, :cowboy, :postgrex, :ecto]
+      applications: [:phoenix, :cowboy, :postgrex, :ecto, :logger]
     ]
   end
 
