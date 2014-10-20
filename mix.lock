@@ -5,9 +5,9 @@
   "inflex": {:package, "0.2.4"},
   "jazz": {:package, "0.2.0"},
   "linguist": {:package, "0.1.2"},
-  "phoenix": {:git, "git://github.com/phoenixframework/phoenix.git", "0a153433f9d01bb2ad23414a478568a934a651dc", []},
-  "plug": {:package, "0.7.0"},
-  "poison": {:package, "1.1.1"},
+  "phoenix": {:git, "git://github.com/phoenixframework/phoenix.git", "446ac07be0679b66383a1914aa16d6ca5148d22d", []},
+  "plug": {:package, "0.8.1"},
+  "poison": {:package, "1.2.0"},
   "poolboy": {:package, "1.2.1"},
   "postgrex": {:package, "0.6.0"},
   "ranch": {:package, "1.0.0"}}
